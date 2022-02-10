@@ -1,4 +1,4 @@
-/*Elements Selectors*/
+/* Elements Selectors */
 body {
   background-color: #191765;
 }
@@ -24,7 +24,8 @@ hr {
   background-color: #646369;
   border: 1px solid #646369;
 }
-/*Class Selectors*/
+
+/* Class Selectors */
 .container {
   display: flex;
 }
@@ -77,7 +78,8 @@ hr {
 .mr {
   margin-right: 7.5%;
 }
-/*Id Selectors*/
+
+/* Id Selectors */
 #p-headline {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
