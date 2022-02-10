@@ -1,13 +1,12 @@
-h1{
+h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-weight: bold;
   font-size: 43px;
-  color: #35AEEF;
+  color: #35aeef;
 }
 
-h2{
+h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 32px;
@@ -23,7 +22,7 @@ hr {
 
 .contenedor {
   background-color: #191765;
-  width: 375px;
+  width: 30%;
 }
 
 .container {
@@ -35,7 +34,7 @@ hr {
   margin-top: 10px;
 }
 
-.tx-center{
+.tx-center {
   text-align: center;
 }
 
@@ -51,7 +50,7 @@ hr {
   height: 160px;
   left: -106px;
   top: 75px;
-  background: #EDECFF;
+  background: #edecff;
   filter: blur(50px);
 }
 
@@ -64,7 +63,7 @@ hr {
   margin: 15px 15px;
 }
 
-.b-hamburger{
+.b-hamburger {
   background-color: #edecff;
   border: 1px solid #edecff;
   width: 30px;
@@ -79,7 +78,7 @@ hr {
   margin-right: 7.5%;
 }
 
-#p-headline{
+#p-headline {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 20px;
