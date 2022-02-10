@@ -1,5 +1,10 @@
+/*Elements Selectors*/
+body {
+  background-color: #191765;
+}
+
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 43px;
@@ -7,7 +12,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
@@ -19,12 +24,7 @@ hr {
   background-color: #646369;
   border: 1px solid #646369;
 }
-
-.contenedor {
-  background-color: #191765;
-  width: 30%;
-}
-
+/*Class Selectors*/
 .container {
   display: flex;
 }
@@ -77,7 +77,7 @@ hr {
 .mr {
   margin-right: 7.5%;
 }
-
+/*Id Selectors*/
 #p-headline {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
