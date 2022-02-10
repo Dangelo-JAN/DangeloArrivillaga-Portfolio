@@ -2,7 +2,6 @@ h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-weight: bold;
   font-size: 43px;
   color: #35aeef;
 }
@@ -13,7 +12,7 @@ h2 {
   font-size: 32px;
   line-height: 44px;
   color: #edecff;
-  margin: 12px 0px;
+  margin: 12px 0;
 }
 
 hr {
