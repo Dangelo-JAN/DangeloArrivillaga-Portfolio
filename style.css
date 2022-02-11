@@ -1,0 +1,91 @@
+/* Elements Selectors */
+body {
+  background-color: #191765;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 43px;
+  color: #35aeef;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  color: #edecff;
+  margin: 12px 0;
+}
+
+hr {
+  background-color: #646369;
+  border: 1px solid #646369;
+}
+
+/* Class Selectors */
+.container {
+  display: flex;
+}
+
+.h-block {
+  width: 50%;
+  margin-top: 10px;
+}
+
+.tx-center {
+  text-align: center;
+}
+
+.c-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blur-circle {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  left: -106px;
+  top: 75px;
+  background: #edecff;
+  filter: blur(50px);
+}
+
+.h2-style {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #edecff;
+  margin: 15px 15px;
+}
+
+.b-hamburger {
+  background-color: #edecff;
+  border: 1px solid #edecff;
+  width: 30px;
+  margin: 5px;
+}
+
+.fd-rr {
+  flex-direction: row-reverse;
+}
+
+.mr {
+  margin-right: 7.5%;
+}
+
+/* Id Selectors */
+#p-headline {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #c8c8d4;
+  width: 327px;
+  height: 170px;
+}
