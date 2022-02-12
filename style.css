@@ -134,7 +134,7 @@ h6 {
 
 .p-1e {
   padding: 1em;
-  background-image:url(img/ellipse18.svg);
+  background-image: url(img/ellipse18.svg);
   background-repeat: no-repeat;
   background-position: -5% -5%;
 }
@@ -224,7 +224,6 @@ h3 {
   line-height: 20px;
   color: #fff;
   border-right: 2px solid #555;
-  /*margin-left: 1.5em;*/
   padding: 0.5em 1.5em;
 }
 
@@ -339,7 +338,7 @@ h3 {
 }
 
 #documentation {
-  background-image:url(img/ellipse19.svg);
+  background-image: url(img/ellipse19.svg);
   background-repeat: no-repeat;
   background-position: right top;
 }
@@ -349,25 +348,25 @@ h3 {
 }
 
 .elipse20 {
-  background-image:url(img/ellipse20.svg);
+  background-image: url(img/ellipse20.svg);
   background-repeat: no-repeat;
   background-position: left 50%;
 }
 
 .elipse21 {
-  background-image:url(img/ellipse21.svg);
+  background-image: url(img/ellipse21.svg);
   background-repeat: no-repeat;
   background-position: right 40%;
 }
 
 .elipse22 {
-  background-image:url(img/ellipse22.svg);
+  background-image: url(img/ellipse22.svg);
   background-repeat: no-repeat;
   background-position: left 45%;
 }
 
 .elipse23 {
-  background-image:url(img/ellipse23.svg);
+  background-image: url(img/ellipse23.svg);
   background-repeat: no-repeat;
   background-position: right;
 }
