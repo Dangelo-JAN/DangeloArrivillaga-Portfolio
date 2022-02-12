@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
