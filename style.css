@@ -1,6 +1,7 @@
 /* Elements Selectors */
 body {
   background-color: #191765;
+  margin: 0;
 }
 
 h1 {
@@ -123,7 +124,8 @@ h6 {
 
 .ai-start {
   align-items: start;
-  width: 50%;
+  width: 45%;
+  padding-left: 5%;
 }
 
 .ul-base {
@@ -132,6 +134,9 @@ h6 {
 
 .p-1e {
   padding: 1em;
+  background-image:url(img/ellipse18.svg);
+  background-repeat: no-repeat;
+  background-position: -5% -5%;
 }
 
 .icons {
@@ -164,7 +169,7 @@ h3 {
   line-height: 52px;
   color: #35aeef;
   text-align: left;
-  margin-left: 0.5em;
+  margin-left: 1em;
   margin-top: 2.5em;
 }
 
@@ -182,7 +187,7 @@ h3 {
 .g-item1 {
   grid-area: image;
   margin-top: 3em;
-  margin-left: 1.5em;
+  margin-left: 2em;
   width: 85vw;
 }
 
@@ -219,7 +224,7 @@ h3 {
   line-height: 20px;
   color: #fff;
   border-right: 2px solid #555;
-  margin-left: 1.5em;
+  /*margin-left: 1.5em;*/
   padding: 0.5em 1.5em;
 }
 
@@ -266,9 +271,10 @@ h3 {
   font-size: 12px;
   line-height: 24px;
   color: #edecff;
-  margin: 2.5em 2em 0 2em;
+  margin: 2.5em 2em 0 2.5em;
   padding: 1em;
   background-color: #35aeef;
+  border-width: 0;
 }
 
 .bc-small {
@@ -276,49 +282,6 @@ h3 {
   height: 68px;
   left: 339px;
   top: 650px;
-}
-
-.blur-elipse {
-  position: absolute;
-  width: 39.61px;
-  height: 482.57px;
-  left: -20.04px;
-  top: 1624.71px;
-  background: #edecff;
-  filter: blur(30px);
-  transform: rotate(-36.38deg);
-}
-
-.blur-elipse-2 {
-  position: absolute;
-  width: 70.28px;
-  height: 261.6px;
-  left: 350.27px;
-  top: 2437.23px;
-  background: #edecff;
-  filter: blur(20px);
-  transform: matrix(-0.84, -0.54, -0.54, 0.84, 0, 0);
-}
-
-.blur-elipse-3 {
-  position: absolute;
-  width: 308px;
-  height: 155px;
-  left: -93px;
-  top: 3224px;
-  background: #edecff;
-  filter: blur(80px);
-}
-
-.blur-elipse-4 {
-  position: absolute;
-  width: 101.29px;
-  height: 377.04px;
-  left: 358.22px;
-  top: 3873px;
-  background: #edecff;
-  filter: blur(30px);
-  transform: matrix(-0.26, 0.97, 0.97, 0.26, 0, 0);
 }
 
 .grid-container-2 {
@@ -363,4 +326,48 @@ h3 {
 
 .mr-b {
   margin-bottom: 2em;
+}
+
+/* new classes after pull request review */
+.ul-work {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.li-work {
+  display: inline;
+}
+
+#documentation {
+  background-image:url(img/ellipse19.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+#arrow-down {
+  padding: 0 1em;
+}
+
+.elipse20 {
+  background-image:url(img/ellipse20.svg);
+  background-repeat: no-repeat;
+  background-position: left 50%;
+}
+
+.elipse21 {
+  background-image:url(img/ellipse21.svg);
+  background-repeat: no-repeat;
+  background-position: right 40%;
+}
+
+.elipse22 {
+  background-image:url(img/ellipse22.svg);
+  background-repeat: no-repeat;
+  background-position: left 45%;
+}
+
+.elipse23 {
+  background-image:url(img/ellipse23.svg);
+  background-repeat: no-repeat;
+  background-position: right;
 }
