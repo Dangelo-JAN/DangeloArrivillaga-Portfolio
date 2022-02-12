@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 43px;
@@ -12,7 +12,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
@@ -93,10 +93,11 @@ hr {
 
 /* Middle section style */
 li {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
+
 h6 {
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -105,24 +106,19 @@ h6 {
 }
 
 .ul-documentation {
-  list-style:none;
-  font-family: Roboto;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
   color: #f5f5ff;
-
   text-align: left;
 }
 
-.container-wrap{
+.container-wrap {
   flex-wrap: wrap;
   padding: 5%;
-}
-
-.tx-left {
-  align-items: left;
 }
 
 .ai-start {
@@ -137,78 +133,80 @@ h6 {
 .p-1e {
   padding: 1em;
 }
- .icons {
+
+.icons {
   width: 20px;
   margin: 3rem 1rem;
- }
+}
 
- .j-content {
-   display: flex;
-   justify-content: center;
- }
+.j-content {
+  display: flex;
+  justify-content: center;
+}
 
- h5 {
-   margin: 0;
-   font-family: Roboto;
-   font-size: 20px;
-   font-style: normal;
-   font-weight: 500;
-   line-height: 32px;
-   letter-spacing: 0em;
-   text-align: center;   
-   color: #a2a3ae;
- }
+h5 {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #a2a3ae;
+}
 
- ion-icon {
+ion-icon {
   color: #a2a3ae;
   font-size: 2rem;
   margin: 0 1rem;
- }
+}
 
- h3 {
-  font-family: Roboto;
+h3 {
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
   line-height: 52px;
   color: #35aeef;
   text-align: left;
-  margin-left: .5em;
+  margin-left: 0.5em;
   margin-top: 2.5em;
- }
+}
 
- .grid-container {
-   display: grid;
-   margin-left: .5em;
-   grid-template-areas: 'image image image image'
-   'header header header header'
-   'paragraph paragraph paragraph paragraph'
-   'css html bootstrap ruby'
-   'buttom buttom buttom buttom';
- }
+.grid-container {
+  display: grid;
+  margin-left: 0.5em;
+  grid-template-areas:
+    'image image image image'
+    'header header header header'
+    'paragraph paragraph paragraph paragraph'
+    'css html bootstrap ruby'
+    'buttom buttom buttom buttom';
+}
 
- .g-item1 {
-   grid-area: image;
-   margin-top: 3em;
-   margin-left: 1.5em;
-   width: 85vw;
- }
+.g-item1 {
+  grid-area: image;
+  margin-top: 3em;
+  margin-left: 1.5em;
+  width: 85vw;
+}
 
- .g-item2 {
+.g-item2 {
   grid-area: header;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
-  color: #ffffff;
+  color: #fff;
   margin-left: 1em;
   margin-bottom: 2em;
 }
 
 .g-item3 {
   grid-area: paragraph;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -220,55 +218,55 @@ h6 {
 
 .g-item4 {
   grid-area: css;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
-  color: #ffffff;
-  border-right: 2px solid #555555;
+  color: #fff;
+  border-right: 2px solid #555;
   margin-left: 1.5em;
-  padding: .5em 1.5em;
+  padding: 0.5em 1.5em;
 }
 
 .g-item5 {
   grid-area: html;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
-  color: #ffffff;
-  border-right: 2px solid #555555;
-  padding: .5em 1.5em;
+  color: #fff;
+  border-right: 2px solid #555;
+  padding: 0.5em 1.5em;
 }
 
 .g-item6 {
   grid-area: bootdtrap;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
-  color: #ffffff;
-  border-right: 2px solid #555555;
-  padding: .5em 1.5em;
+  color: #fff;
+  border-right: 2px solid #555;
+  padding: 0.5em 1.5em;
 }
 
 .g-item7 {
   grid-area: ruby;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
-  color: #ffffff;
-  padding: .5em 1.5em;
+  color: #fff;
+  padding: 0.5em 1.5em;
 }
 
 .g-item8 {
   grid-area: buttom;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -276,7 +274,7 @@ h6 {
   color: #edecff;
   margin: 2.5em 2em 0 2em;
   padding: 1em;
-  background-color: #35aeef;;
+  background-color: #35aeef;
 }
 
 .bc-small {
@@ -331,40 +329,42 @@ h6 {
 
 .grid-container-2 {
   display: grid;
-  margin-left: .5em;
-  grid-template-areas: 'aboutMe image'
-  'p-aboutMe image';
+  grid-template-areas:
+    'image image image image'
+    'header header header header'
+    'paragraph paragraph paragraph paragraph';
+  margin-left: 0.5em;
+  grid-template-rows: auto auto auto;
 }
 
 .g-item9 {
   grid-area: image;
   margin-top: 3em;
-  margin-left: 1.5em;
+  margin-left: 1em;
   width: 85vw;
 }
 
 .g-item10 {
   grid-area: header;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
-  color: #ffffff;
+  color: #fff;
   margin-left: 1em;
-  margin-bottom: 2em;
 }
 
 .g-item11 {
   grid-area: paragraph;
-  font-family: Inter;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 28px;
   color: #dcdce8;
   margin-left: 1.5em;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .mr-b {
