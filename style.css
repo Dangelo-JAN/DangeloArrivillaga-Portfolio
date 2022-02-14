@@ -338,7 +338,7 @@ h3 {
 }
 
 .li-work {
-  display: inline;
+  display: float;
 }
 
 #documentation {
