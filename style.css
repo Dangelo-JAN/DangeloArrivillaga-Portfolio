@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
@@ -13,7 +13,7 @@ h1 {
   font-weight: 700;
   font-style: normal;
   font-size: 43px;
-  color: #35aeef;
+  color: #7d73fc;
 }
 
 h2 {
@@ -107,7 +107,7 @@ h6 {
   font-weight: 500;
   font-size: 12px;
   line-height: 24px;
-  color: #35aeef;
+  color: #9490ff;
 }
 
 .ul-documentation {
@@ -373,4 +373,113 @@ h3 {
   background-image: url(img/ellipse23.svg);
   background-repeat: no-repeat;
   background-position: right;
+}
+
+/* Final section Form and footer */
+.non-style {
+  list-style: none;
+  padding: 0;
+}
+
+.h-form {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 1em;
+}
+
+.p-form {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f5f5ff;
+  margin: 0 2em;
+}
+
+.e-mail {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #ebebff;
+  position: absolute;
+  width: 221px;
+  height: 29px;
+  left: 76px;
+  top: 6150px;
+}
+
+input {
+  width: 80vw;
+  height: 3em;
+}
+
+.li-form {
+  padding: 0.5em 0;
+}
+
+#form-section {
+  border-bottom: 2px solid #3a3837;
+  padding-bottom: 4em;
+}
+
+textarea {
+  width: 80vw;
+  height: 10em;
+}
+
+.mr-s {
+  margin: 0 auto;
+}
+
+.centering-s {
+  text-align: center;
+  width: 80vw;
+}
+
+.email-field {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  background-color: #f7f3ff;
+  border: 1px solid #9490ff;
+}
+
+.email-field::placeholder {
+  color: #191765;
+}
+
+.text-field {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.text-field::placeholder {
+  color: #81818c;
+}
+
+.msg-field {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.msg-field::placeholder {
+  color: #81818c;
 }
