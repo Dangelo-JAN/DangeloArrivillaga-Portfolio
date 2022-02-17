@@ -1,28 +1,61 @@
-/* Elements Selectors */
+/* ----- VARIABLES ----- */
+:root {
+  --color-p-headers: #7d73fc;
+  --color-s-headers: #9490ff;
+  --color-white: white;
+
+  --pfont-family: 'roboto', sans-serif;
+  --sfont-family: 'Inter', sans-serif;
+
+  --border-li-card: 2px solid #555;
+
+
+}
+
+/* ----- Elements Selectors ----- */
 body {
   background-color: #191765;
   margin: 0;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
 h1 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
   font-style: normal;
   font-size: 43px;
-  color: #7d73fc;
+  color: var(--color-p-headers);
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--color-s-headers);
+  text-align: left;
+  margin-left: 1em;
+  margin-top: 2.5em;
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #a2a3ae;
+}
+
+h4 {
   font-size: 32px;
   line-height: 44px;
   color: #edecff;
   margin: 12px 0;
+}
+
+h6 {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--color-s-headers);
 }
 
 hr {
@@ -31,7 +64,49 @@ hr {
   width: 350px;
 }
 
+li {
+  margin-bottom: 0.5em;
+}
+
+input {
+  width: 80vw;
+  height: 3em;
+}
+
+textarea {
+  width: 80vw;
+  height: 10em;
+}
+
 /* Class Selectors */
+
+/* ----------generic styles---------------------- */
+
+.pff-700 {
+  font-family: var(--pfont-family);
+  font-weight: 700;
+}
+
+.pff-500 {
+  font-family: var(--pfont-family);
+  font-weight: 500;
+}
+
+.pff-400 {
+  font-family: var(--pfont-family);
+  font-weight: 400;
+}
+
+.sff-500 {
+  font-family: var(--sfont-family);
+  font-weight: 500;
+}
+
+.sff-400 {
+  font-family: var(--sfont-family);
+  font-weight: 400;
+}
+
 .container {
   display: flex;
 }
@@ -42,6 +117,8 @@ hr {
   align-items: center;
 }
 
+/* ----------generic styles---------------------- */
+
 .h-block {
   width: 50%;
   margin-top: 10px;
@@ -51,19 +128,7 @@ hr {
   text-align: center;
 }
 
-.blur-circle {
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  left: -106px;
-  top: 75px;
-  background: #edecff;
-  filter: blur(50px);
-}
-
 .h2-style {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
   font-size: 18px;
   line-height: 16px;
   color: #edecff;
@@ -85,36 +150,9 @@ hr {
   margin-right: 7.5%;
 }
 
-/* Id Selectors */
-#p-headline {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  color: #c8c8d4;
-  width: 327px;
-  height: 170px;
-}
-
-/* Middle section style */
-li {
-  margin-bottom: 0.5em;
-}
-
-h6 {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 24px;
-  color: #9490ff;
-}
-
 .ul-documentation {
   list-style: none;
-  font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 15px;
   line-height: 24px;
   color: #f5f5ff;
@@ -153,30 +191,6 @@ h6 {
   justify-content: center;
 }
 
-h5 {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 32px;
-  letter-spacing: 0;
-  text-align: center;
-  color: #a2a3ae;
-}
-
-h3 {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 52px;
-  color: #35aeef;
-  text-align: left;
-  margin-left: 1em;
-  margin-top: 2.5em;
-}
-
 .grid-container {
   display: grid;
   margin-left: 0.5em;
@@ -188,6 +202,23 @@ h3 {
     'buttom buttom buttom buttom';
 }
 
+.ul-card {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.li-card {
+  display: inline;
+}
+
+.a-card {
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+  padding: 0.5em 1.5em;
+}
+
 .g-item1 {
   grid-area: image;
   margin-top: 3em;
@@ -197,9 +228,7 @@ h3 {
 
 .g-item2 {
   grid-area: header;
-  font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 500;
   font-size: 32px;
   line-height: 44px;
   color: #fff;
@@ -221,56 +250,26 @@ h3 {
 
 .g-item4 {
   grid-area: css;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  color: #fff;
-  border-right: 2px solid #555;
-  padding: 0.5em 1.5em;
+  border-right: var(--border-li-card);
 }
 
 .g-item5 {
   grid-area: html;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  color: #fff;
-  border-right: 2px solid #555;
-  padding: 0.5em 1.5em;
+  border-right: var(--border-li-card);
 }
 
 .g-item6 {
   grid-area: bootdtrap;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  color: #fff;
-  border-right: 2px solid #555;
-  padding: 0.5em 1.5em;
+  border-right: var(--border-li-card);
 }
 
 .g-item7 {
   grid-area: ruby;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  color: #fff;
-  padding: 0.5em 1.5em;
 }
 
 .g-item8 {
   grid-area: buttom;
-  font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 500;
   font-size: 12px;
   line-height: 24px;
   color: #edecff;
@@ -316,9 +315,7 @@ h3 {
 
 .g-item10 {
   grid-area: header;
-  font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 500;
   font-size: 32px;
   line-height: 44px;
   color: #fff;
@@ -327,9 +324,7 @@ h3 {
 
 .g-item11 {
   grid-area: paragraph;
-  font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 20px;
   line-height: 28px;
   color: #dcdce8;
@@ -339,26 +334,6 @@ h3 {
 
 .mr-b {
   margin-bottom: 2em;
-}
-
-/* new classes after pull request review */
-.ul-work {
-  list-style: none;
-  padding: 0.5rem;
-}
-
-.li-work {
-  display: inline;
-}
-
-#documentation {
-  background-image: url(img/ellipse19.svg);
-  background-repeat: no-repeat;
-  background-position: right top;
-}
-
-#arrow-down {
-  padding: 0 1em;
 }
 
 .elipse20 {
@@ -408,9 +383,7 @@ h3 {
 }
 
 .h-form {
-  font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 500;
   font-size: 32px;
   line-height: 44px;
   text-align: center;
@@ -419,9 +392,7 @@ h3 {
 }
 
 .p-form {
-  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
@@ -430,9 +401,7 @@ h3 {
 }
 
 .e-mail {
-  font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 20px;
   line-height: 28px;
   text-align: center;
@@ -444,30 +413,14 @@ h3 {
   top: 6150px;
 }
 
-input {
-  width: 80vw;
-  height: 3em;
-}
-
 .li-form {
   padding: 0.5em 0;
-}
-
-#form-section {
-  border-bottom: 2px solid #3a3837;
-  padding-bottom: 4em;
-}
-
-textarea {
-  width: 80vw;
-  height: 10em;
 }
 
 .mr-s {
   margin: 0 auto;
 }
 
-/* hover and action styel */
 .mr-s:hover {
   background: #35aeef;
 }
@@ -476,16 +429,13 @@ textarea {
   color: #000;
 }
 
-/*  Fin hover and active style    */
 .centering-s {
   text-align: center;
   width: 80vw;
 }
 
 .email-field {
-  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 15px;
   line-height: 24px;
   background-color: #f7f3ff;
@@ -497,9 +447,7 @@ textarea {
 }
 
 .text-field {
-  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 15px;
   line-height: 24px;
 }
@@ -509,13 +457,35 @@ textarea {
 }
 
 .msg-field {
-  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 15px;
   line-height: 24px;
 }
 
 .msg-field::placeholder {
   color: #81818c;
+}
+
+/* Id Selectors */
+#p-headline {
+  font-size: 20px;
+  line-height: 28px;
+  color: #c8c8d4;
+  width: 327px;
+  height: 170px;
+}
+
+#documentation {
+  background-image: url(img/ellipse19.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+#arrow-down {
+  padding: 0 1em;
+}
+
+#form-section {
+  border-bottom: 2px solid #3a3837;
+  padding-bottom: 4em;
 }
