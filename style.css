@@ -374,3 +374,19 @@ h3 {
   background-repeat: no-repeat;
   background-position: right;
 }
+
+/* animations and transitions */
+.animation-h1 {
+  position: relative;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+  font-size: 14px;
+}
+
+.animation-h1:active {
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+  font-size: 36px;
+}
