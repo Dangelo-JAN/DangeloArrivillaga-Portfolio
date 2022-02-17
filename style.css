@@ -280,6 +280,17 @@ h3 {
   border-width: 0;
 }
 
+.g-item8:active {
+  color: blue;
+  background-color: gray;
+}
+
+.g-item8:hover {
+  color: blue;
+  background-color: green;
+}
+
+
 .bc-small {
   width: 68px;
   height: 68px;
