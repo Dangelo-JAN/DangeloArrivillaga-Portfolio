@@ -280,6 +280,16 @@ h3 {
   border-width: 0;
 }
 
+.g-item8:active {
+  color: blue;
+  background-color: gray;
+}
+
+.g-item8:hover {
+  color: blue;
+  background-color: green;
+}
+
 .bc-small {
   width: 68px;
   height: 68px;
@@ -373,6 +383,22 @@ h3 {
   background-image: url(img/ellipse23.svg);
   background-repeat: no-repeat;
   background-position: right;
+}
+
+/* animations and transitions */
+.animation-h1 {
+  position: relative;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+  font-size: 14px;
+}
+
+.animation-h1:active {
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+  font-size: 36px;
 }
 
 /* Final section Form and footer */
