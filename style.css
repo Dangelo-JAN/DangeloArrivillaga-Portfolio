@@ -290,7 +290,6 @@ h3 {
   background-color: green;
 }
 
-
 .bc-small {
   width: 68px;
   height: 68px;
@@ -386,7 +385,6 @@ h3 {
   background-position: right;
 }
 
-
 /* animations and transitions */
 .animation-h1 {
   position: relative;
@@ -401,6 +399,7 @@ h3 {
   transition-duration: 4s;
   transition-delay: 2s;
   font-size: 36px;
+}
 
 /* Final section Form and footer */
 .non-style {
