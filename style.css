@@ -3,13 +3,9 @@
   --color-p-headers: #7d73fc;
   --color-s-headers: #9490ff;
   --color-white: white;
-
   --pfont-family: 'roboto', sans-serif;
   --sfont-family: 'Inter', sans-serif;
-
   --border-li-card: 2px solid #555;
-
-
 }
 
 /* ----- Elements Selectors ----- */
@@ -22,6 +18,8 @@ h1 {
   font-style: normal;
   font-size: 43px;
   color: var(--color-p-headers);
+  opacity: 1;
+
 }
 
 h2 {
@@ -78,10 +76,9 @@ textarea {
   height: 10em;
 }
 
-/* Class Selectors */
+/* -----Class Selectors----- */
 
-/* ----------generic styles---------------------- */
-
+/* -----generic styles----- */
 .pff-700 {
   font-family: var(--pfont-family);
   font-weight: 700;
@@ -117,7 +114,7 @@ textarea {
   align-items: center;
 }
 
-/* ----------generic styles---------------------- */
+/* -----generic styles----- */
 
 .h-block {
   width: 50%;
@@ -186,6 +183,13 @@ textarea {
   margin: 3rem 1rem;
 }
 
+.w-style {
+  font-style: normal;
+  font-size: 20px;
+  line-height: 32px;
+  color: #a2a3ae;
+}
+
 .j-content {
   display: flex;
   justify-content: center;
@@ -238,14 +242,13 @@ textarea {
 
 .g-item3 {
   grid-area: paragraph;
-  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 20px;
   line-height: 28px;
   color: #dcdce8;
   margin-left: 1.5em;
   margin-top: 2em;
+  width: 60vw;
 }
 
 .g-item4 {
@@ -277,16 +280,6 @@ textarea {
   padding: 1em;
   background-color: #7d73fc;
   border-width: 0;
-}
-
-.g-item8:active {
-  color: blue;
-  background-color: gray;
-}
-
-.g-item8:hover {
-  color: blue;
-  background-color: green;
 }
 
 .bc-small {
@@ -360,23 +353,6 @@ textarea {
   background-position: right;
 }
 
-/* animations and transitions */
-.animation-h1 {
-  position: relative;
-  transition-property: font-size;
-  transition-duration: 4s;
-  transition-delay: 2s;
-  font-size: 14px;
-}
-
-.animation-h1:active {
-  transition-property: font-size;
-  transition-duration: 4s;
-  transition-delay: 2s;
-  font-size: 36px;
-}
-
-/* Final section Form and footer */
 .non-style {
   list-style: none;
   padding: 0;
@@ -422,11 +398,7 @@ textarea {
 }
 
 .mr-s:hover {
-  background: #35aeef;
-}
-
-.mr-s:active {
-  color: #000;
+  background-color: #35aeef;
 }
 
 .centering-s {
@@ -488,4 +460,145 @@ textarea {
 #form-section {
   border-bottom: 2px solid #3a3837;
   padding-bottom: 4em;
+}
+
+/* -----Hidden elements----- */
+.hidden-el {
+  display: none;
+}
+
+/* -----Animations and Transitions----- */
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+/* -----Desktop media query Version----- */
+
+
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+
+  .b-hamburger {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+  }
+
+  .li-desktop {
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: #fff;
+    margin: 0 1em;
+  }
+
+  .e-mail-icon-style {
+    padding-top: 4px;
+  }
+
+  .ul-documentation {
+    font-size: 14.2px;
+    line-height: 28px;
+    color: #fff;
+  }
+
+  #documentation {
+    justify-content: center;
+    padding: 0;
+    padding-left: 5em;
+  }
+
+  #p-headline {
+    width: 480px;
+    margin-top: 5em;
+    margin-bottom: -2em;
+  }
+
+  .ai-start {
+    width: 10%;
+    padding-left: 0;
+    padding-right: 5%;
+  }
+
+  hr {
+    width: 480px;
+  }
+
+  .h6-documentation {
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 1em;
+  }
+
+  .w-class {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 5em;
+    padding-bottom: 10em;
+  }
+
+  .p-work {
+    display: inline-block;
+  }
+
+  h2 {
+    padding-left: 0.3em;
+  }
+
+  .hr-work {
+    width: 90vw;
+  }
+
+  .g-container {
+    display: grid;
+    margin-left: 0.5em;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+  }
+
+
+
+  .g-item1 {
+    grid-area: 1 / 1 / 5 / 2;
+
+  }
+  
+  .g-item2 {
+    grid-area: 1 / 2 / 2 / 6;
+
+  }
+  
+  .g-item3 {
+    grid-area: 2 / 2 / 3 / 6;
+
+  }
+  
+  .g-item12 {
+    grid-area: 3 / 2 / 4 / 6;
+    border-right: var(--border-li-card);
+  }
+
+  .g-item8 {
+    grid-area: 4 / 2 / 5 / 6;
+
+  }
 }
