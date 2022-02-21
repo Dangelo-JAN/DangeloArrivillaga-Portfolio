@@ -1,6 +1,6 @@
 # DangeloArrivillaga-Portfolio
 
-> This is the best way that I can show you my work.
+> This is the best way that I can show you my work at: https://dangelo-jan.github.io/DangeloArrivillaga-Portfolio/
 
 
 ## Built With
@@ -17,11 +17,21 @@
 - GitHub: [@Dangelo-JAN](https://github.com/Dangelo-JAN)
 - LinkedIn: [Soluciones Empresriales Dangelo Arrivillaga](https://www.linkedin.com/in/soluciones-empresariales-dangelo-arrivillaga-2a144718a/)
 
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- W3Schools
+- MDN Web Docs
 
 ## 📝 License
 
