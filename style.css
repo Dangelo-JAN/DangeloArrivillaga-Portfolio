@@ -504,7 +504,7 @@ textarea {
 }
 
 /* -----Desktop media query Version----- */
-@media screen and (min-width: 992px) and (max-width: 1400px) {
+@media screen and (min-width: 992px) {
   .resp-hidden {
     display: none;
   }
