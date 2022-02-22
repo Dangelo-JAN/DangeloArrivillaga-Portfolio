@@ -3,8 +3,8 @@
   --color-p-headers: #7d73fc;
   --color-s-headers: #9490ff;
   --color-white: white;
-  --pfont-family: 'roboto', sans-serif;
-  --sfont-family: 'Inter', sans-serif;
+  --pfont-family: "roboto", sans-serif;
+  --sfont-family: "Inter", sans-serif;
   --border-li-card: 2px solid #555;
 }
 
@@ -199,11 +199,11 @@ textarea {
   display: grid;
   margin-left: 0.5em;
   grid-template-areas:
-    'image image image image'
-    'header header header header'
-    'paragraph paragraph paragraph paragraph'
-    'css html bootstrap ruby'
-    'buttom buttom buttom buttom';
+    "image image image image"
+    "header header header header"
+    "paragraph paragraph paragraph paragraph"
+    "css html bootstrap ruby"
+    "buttom buttom buttom buttom";
 }
 
 .ul-card {
@@ -278,7 +278,7 @@ textarea {
   color: #edecff;
   margin: 2.5em 2em 0 2.5em;
   padding: 1em;
-  background-color: #7d73fc;
+  background-color: #574bf9;
   border-width: 0;
 }
 
@@ -292,9 +292,9 @@ textarea {
 .grid-container-2 {
   display: grid;
   grid-template-areas:
-    'image image image image'
-    'header header header header'
-    'paragraph paragraph paragraph paragraph';
+    "image image image image"
+    "header header header header"
+    "paragraph paragraph paragraph paragraph";
   margin-left: 0.5em;
   grid-template-rows: auto auto auto;
 }
@@ -371,7 +371,7 @@ textarea {
 }
 
 .h-form::before {
-  content: 'CONTACT US';
+  content: "CONTACT US";
 }
 
 .p-form {
@@ -407,7 +407,7 @@ textarea {
 }
 
 .mr-s::before {
-  content: 'See Project';
+  content: "See Project";
 }
 
 .mr-s:hover {
@@ -724,7 +724,7 @@ textarea {
   }
 
   .mr-s::before {
-    content: 'SEND';
+    content: "SEND";
   }
 
   .p-1e {
