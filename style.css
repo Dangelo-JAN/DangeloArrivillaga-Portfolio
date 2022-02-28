@@ -13,6 +13,8 @@ body {
   background-color: #191765;
   margin: 0;
   border: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -448,7 +450,7 @@ textarea {
 }
 
 .msg-field::placeholder {
-  color: #81818c;
+  color: black;
 }
 
 /* Id Selectors */
@@ -763,4 +765,52 @@ textarea {
     background-repeat: no-repeat;
     background-position: right top;
   }
+}
+
+/* ------ mobile menu updates ----- */
+
+.nav-desktop {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #edecff;
+  background-color: #191765;
+  width: 90vw;
+  height: 100vh;
+  margin: 0;
+  padding-top: 3em;
+  list-style: none;
+}
+
+.nav-desktop.active {
+  left: 0;
+}
+
+.li-desktop {
+  align-self: start;
+  padding: 0.5em 0;
+}
+
+.mg-t {
+  margin-top: 1em;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 0.6em; 
+}
+
+.e-mail-icon-style {
+  display: none;
+}
+
+.arrow-right-style {
+  position: absolute;
+  right: 12%;
 }
