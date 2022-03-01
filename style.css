@@ -520,6 +520,13 @@ textarea {
     align-items: center;
     text-align: center;
     list-style: none;
+
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .mg-t {
+    margin-top: 0;
   }
 
   .li-desktop {
@@ -779,7 +786,7 @@ textarea {
   font-size: 1.5em;
   color: #edecff;
   background-color: #191765;
-  width: 90vw;
+  width: 91vw;
   height: 100vh;
   margin: 0;
   padding-top: 3em;
@@ -813,4 +820,9 @@ textarea {
 .arrow-right-style {
   position: absolute;
   right: 12%;
+}
+
+.a-menu {
+  text-decoration: none;
+  color: #edecff;
 }
