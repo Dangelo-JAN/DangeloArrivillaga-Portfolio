@@ -1,6 +1,7 @@
 const hamburguer = document.querySelector('.hamburguer');
 const menu = document.querySelector('.nav-desktop');
 const close = document.querySelector('.close-icon');
+
 hamburguer.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
