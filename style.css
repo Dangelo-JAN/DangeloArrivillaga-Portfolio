@@ -819,3 +819,17 @@ textarea {
   text-decoration: none;
   color: #edecff;
 }
+
+.backdrop {
+  width: 50vw;
+  height: 50vh;
+  position: fixed;
+  background-color: black;
+}
+
+.modal {
+  width: 50vw;
+  height: 50vh;
+  position: fixed;
+  background-color: black;
+}

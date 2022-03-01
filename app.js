@@ -4,6 +4,8 @@ const close = document.querySelector('.close-icon');
 const myEmail = document.querySelector('.e-mail');
 const emailIcon = document.querySelector('.e-mail-icon-style');
 const liPortfolio = document.querySelector('.mg-t-dom');
+
+
 hamburguer.addEventListener('click', () => {
   menu.classList.toggle('otra-clase');
   myEmail.classList.add('hidden-el');
@@ -33,7 +35,6 @@ document.querySelectorAll('.arrow-right-style').forEach((x) => x.addEventListene
 }));
 
 const startSection = document.querySelector('.hr1');
-const modal;
 
 const card = {
   images: ['img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg'],
@@ -108,6 +109,12 @@ for(i=0; i<4; i++){
   buttonCard.classList.add('pff-500');
   buttonCard.textContent = 'See Project';
   containerCard.appendChild(buttonCard);
+  buttonCard.addEventListener('click', () => {
+    backdrop = document.createElement('section');
+    backdrop.classList.add('backdrop');
+    document.body.insertBefore(backdrop, startSection);
+    popupWindow(card.images, card.name);
+  });
    
   if(i === 0){
     containerCard.classList.add('elipse20');
@@ -142,3 +149,68 @@ for(i=0; i<4; i++){
   }
 };
 
+
+/*
+
+const seeProject;
+seeProject.addEventListener('click', () => {
+  menu.classList.toggle('otra-clase');
+  myEmail.classList.add('hidden-el');
+  emailIcon.classList.add('hidden-el');
+  liPortfolio.classList.add('mg-t');
+});
+
+
+*/
+
+
+
+function popupWindow(image, workTitle){
+  modal = document.createElement('div');
+  modal.classList.add('modal');
+  modal.innerHTML = `
+    <div class="popup-title">
+      <h2>${workTitle}</h2>
+    </div>
+    <div class="popup-tag">
+      <ul class="tags-container2">
+        <li class="tag">${worksPopup.technologies[0]}</li>
+        <li class="tag">${worksPopup.technologies[1]}</li>
+        <li class="tag">${worksPopup.technologies[2]}</li>
+      </ul>
+    </div>
+    <div class="popup-work">
+      <img class="images" src="${image}" alt="Project Image">
+      <div class="cont">
+        <div class="popup-pharagraph">
+          <p>${worksPopup.description}</p>
+        </div>
+        <div class="popup-buttons">
+        <button class="button" type="button"><a href="${worksPopup.sourceButton}">See this project</a></button>
+        <button class="button" type="button"><a href="${worksPopup.liveButton}">See live</a></button>
+        </div>
+      </div>
+    </div>`;
+
+  backdrop.appendChild(modal);
+  // document.body.insertBefore(modal, demoContainer);
+  // document.body.insertBefore(modal, demoContainer);
+  
+  
+};
+/*
+function closeModal () {
+  if(backdrop){
+  backdrop.remove();
+  }
+
+  if(modal){
+    modal.remove();
+  }
+};
+
+
+popupWindow(worksImages[i], workTitle[i]);
+backdrop.addEventListener('click', closeModal);
+
+*/
