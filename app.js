@@ -9,10 +9,10 @@ close.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
-document.querySelectorAll('.li-desktop').forEach( (n) => n.addEventListener('click', () => {
+document.querySelectorAll('.li-desktop').forEach((n) => n.addEventListener('click', () => {
   menu.classList.toggle('active');
 }));
 
-document.querySelectorAll('..arrow-right-style').forEach( (x) => x.addEventListener('click', () => {
+document.querySelectorAll('.arrow-right-style').forEach((x) => x.addEventListener('click', () => {
   menu.classList.toggle('active');
 }));
