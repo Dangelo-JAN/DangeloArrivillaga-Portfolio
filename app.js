@@ -1,25 +1,18 @@
 const hamburguer = document.querySelector('.hamburguer');
-
 const menu = document.querySelector('.nav-desktop');
-
 const close = document.querySelector('.close-icon');
+hamburguer.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
 
-hamburguer.addEventListener('click', () =>
+close.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
 
-  menu.classList.toggle('active'),
-);
+document.querySelectorAll('.li-desktop').forEach( (n) => n.addEventListener('click', () => {
+  menu.classList.toggle('active');
+}));
 
-close.addEventListener('click', () =>
-
-  menu.classList.toggle('active'),
-);
-
-document.querySelectorAll('.li-desktop').forEach( (n) => n.addEventListener('click', () =>
-
-  menu.classList.toggle('active'),
-));
-
-document.querySelectorAll('..arrow-right-style').forEach( (x) => x.addEventListener('click', () =>
-
-  menu.classList.toggle('active'),
-));
+document.querySelectorAll('..arrow-right-style').forEach( (x) => x.addEventListener('click', () => {
+  menu.classList.toggle('active');
+}));
