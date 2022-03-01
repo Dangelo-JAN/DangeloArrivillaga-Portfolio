@@ -805,12 +805,14 @@ textarea {
   top: 10%;
   right: 10%;
   width: 0.6em;
+  padding-right: 1em;
 }
 
 .arrow-right-style {
   position: absolute;
   right: 12%;
   margin-top: 0.5em;
+  padding-right: 1em;
 }
 
 .a-menu {
