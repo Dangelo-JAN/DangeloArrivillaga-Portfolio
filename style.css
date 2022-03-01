@@ -520,7 +520,6 @@ textarea {
     align-items: center;
     text-align: center;
     list-style: none;
-
     flex-direction: row;
     justify-content: end;
   }
@@ -775,7 +774,6 @@ textarea {
 }
 
 /* ------ mobile menu updates ----- */
-
 .nav-desktop {
   position: fixed;
   left: -100%;
@@ -810,7 +808,7 @@ textarea {
   position: absolute;
   top: 10%;
   right: 10%;
-  width: 0.6em; 
+  width: 0.6em;
 }
 
 .e-mail-icon-style {
