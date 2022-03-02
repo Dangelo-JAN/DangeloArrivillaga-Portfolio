@@ -4,6 +4,8 @@ const close = document.querySelector('.close-icon');
 const myEmail = document.querySelector('.e-mail');
 const emailIcon = document.querySelector('.e-mail-icon-style');
 const liPortfolio = document.querySelector('.mg-t-dom');
+var backdrop;
+var modal;
 
 
 hamburguer.addEventListener('click', () => {
@@ -38,10 +40,11 @@ const startSection = document.querySelector('.hr1');
 
 const card = {
   images: ['img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg'],
-  name: ['Multi-Post Stories', 'Multi-Post Stories', 'Multi-Post Stories', 'Multi-Post Stories'],
+  name: ['Multi-Post Stories'],
   description: 'A daily selection of privately personalized reads no accounts or sign-ups required. has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
   technologies: ['css', 'html', 'Bootstrap', 'Ruby'],
-
+  liveButton: '',
+  sourceButton: ''
 };
 
 var myWork = document.createElement('section');
@@ -66,13 +69,15 @@ for(i=0; i<4; i++){
   var containerCard = document.createElement('div');
   containerCard.classList.add('g-container');
   myWork.appendChild(containerCard);
+
   var imageCard = document.createElement('img');
   imageCard.classList.add('g-item1');
   imageCard.src = card.images[i];
   containerCard.appendChild(imageCard);
+
   var cardTitle = document.createElement('h5');
   cardTitle.classList.add('g-item2');
-  cardTitle.textContent = card.name[i];
+  cardTitle.textContent = card.name;
   containerCard.appendChild(cardTitle);
 
   var cardParagraph = document.createElement('p');
@@ -108,12 +113,14 @@ for(i=0; i<4; i++){
   buttonCard.classList.add('g-item8');
   buttonCard.classList.add('pff-500');
   buttonCard.textContent = 'See Project';
+  buttonCard.setAttribute('type', 'button');
   containerCard.appendChild(buttonCard);
   buttonCard.addEventListener('click', () => {
     backdrop = document.createElement('section');
     backdrop.classList.add('backdrop');
     document.body.insertBefore(backdrop, startSection);
-    popupWindow(card.images, card.name);
+    popupWindow(card.images[0], card.name);
+    backdrop.addEventListener('click', closeModal);
   });
    
   if(i === 0){
@@ -170,35 +177,30 @@ function popupWindow(image, workTitle){
   modal.classList.add('modal');
   modal.innerHTML = `
     <div class="popup-title">
-      <h2>${workTitle}</h2>
+      <button class="" type="button"><img class="close-popup" src="img/close-icon.svg" alt="Close popup"></button>
+      <h5 class="g-item2">${card.name}</h5>
+    </div>
+    <div class="image-popup">
+      <img class="images" src="${image}" alt="Project Image">
+    </div>
+    <div class="popup-pharagraph">
+          <p class="g-item3 paragraph-popup">${card.description}</p>
     </div>
     <div class="popup-tag">
-      <ul class="tags-container2">
-        <li class="tag">${worksPopup.technologies[0]}</li>
-        <li class="tag">${worksPopup.technologies[1]}</li>
-        <li class="tag">${worksPopup.technologies[2]}</li>
+      <ul class="ul-card">
+        <li class="li-card g-item4"><a class="sff-500 a-card">${card.technologies[0]}</a></li>
+        <li class="li-card g-item5"><a class="sff-500 a-card">${card.technologies[1]}</a></li>
+        <li class="li-card g-item6"><a class="sff-500 a-card">${card.technologies[2]}</a></li>
+        <li class="li-card g-item7"><a class="sff-500 a-card">${card.technologies[3]}</a></li>
       </ul>
     </div>
-    <div class="popup-work">
-      <img class="images" src="${image}" alt="Project Image">
-      <div class="cont">
-        <div class="popup-pharagraph">
-          <p>${worksPopup.description}</p>
-        </div>
-        <div class="popup-buttons">
-        <button class="button" type="button"><a href="${worksPopup.sourceButton}">See this project</a></button>
-        <button class="button" type="button"><a href="${worksPopup.liveButton}">See live</a></button>
-        </div>
-      </div>
+    <div class="popup-buttons">
+        <button class="g-item8 pff-500 mr-b" type="button"><a class="sff-500 a-card" href="${card.sourceButton}">See this project</a></button>
+        <button class="g-item8 pff-500 mr-b" type="button"><a class="sff-500 a-card" href="${card.liveButton}">See live</a></button>
     </div>`;
-
   backdrop.appendChild(modal);
-  // document.body.insertBefore(modal, demoContainer);
-  // document.body.insertBefore(modal, demoContainer);
-  
-  
 };
-/*
+
 function closeModal () {
   if(backdrop){
   backdrop.remove();
@@ -210,7 +212,6 @@ function closeModal () {
 };
 
 
-popupWindow(worksImages[i], workTitle[i]);
-backdrop.addEventListener('click', closeModal);
+// popupWindow(worksImages[i], workTitle[i]);
+// backdrop.addEventListener('click', closeModal);
 
-*/

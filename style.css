@@ -821,15 +821,33 @@ textarea {
 }
 
 .backdrop {
-  width: 50vw;
-  height: 50vh;
   position: fixed;
-  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .modal {
-  width: 50vw;
-  height: 50vh;
   position: fixed;
-  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 1.5rem;
+  transition: 1s;
+}
+
+.image-popup {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.paragraph-popup {
+  text-align: center;
+  width: 90%;
 }
