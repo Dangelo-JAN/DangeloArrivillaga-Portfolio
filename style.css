@@ -61,7 +61,7 @@ h6 {
 hr {
   background-color: #646369;
   border: 1px solid #646369;
-  width: 380px;
+  width: 80vw;
 }
 
 li {
@@ -222,7 +222,7 @@ textarea {
   font-size: 15px;
   line-height: 20px;
   color: #fff;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1.2em;
 }
 
 .g-item1 {
@@ -391,11 +391,6 @@ textarea {
   line-height: 28px;
   text-align: center;
   color: #ebebff;
-  position: absolute;
-  width: 221px;
-  height: 29px;
-  left: 100px;
-  top: 6220px;
 }
 
 .li-form {
@@ -827,6 +822,8 @@ textarea {
   top: 0;
   left: 0;
   z-index: 100;
+  background-color: #191765;
+  background-image: url('img/modal-circles.svg');
 }
 
 .modal {
@@ -837,8 +834,10 @@ textarea {
   width: 80%;
   z-index: 200;
   background: rgba(255, 255, 255, 0.16);
-  padding: 1.5rem;
+  padding: 0.5rem;
   transition: 1s;
+  margin: 0;
+  border: solid #fff 1px;
 }
 
 .image-popup {
@@ -850,4 +849,29 @@ textarea {
 .paragraph-popup {
   text-align: center;
   width: 90%;
+  margin-left: 1em;
+}
+
+.inner-close-icon {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 3%;
+  right: 10%;
+}
+
+.inner-title {
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
+.inner-margin-buttom {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.inner-icon {
+  padding-top: 1em;
+  margin-left: 1em;
 }

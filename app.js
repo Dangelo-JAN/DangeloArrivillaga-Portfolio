@@ -4,9 +4,65 @@ const close = document.querySelector('.close-icon');
 const myEmail = document.querySelector('.e-mail');
 const emailIcon = document.querySelector('.e-mail-icon-style');
 const liPortfolio = document.querySelector('.mg-t-dom');
-var backdrop;
-var modal;
+const backdrop = document.createElement('section');
+const modal = document.createElement('div');
+const startSection = document.querySelector('.hr1');
+const card = {
+  images: ['img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg'],
+  name: ['Multi-Post Stories', 'Multi-Post Stories', 'Multi-Post Stories', 'Multi-Post Stories'],
+  description: 'A daily selection of privately personalized reads no accounts or sign-ups required. has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+  technologies: ['css', 'html', 'Bootstrap', 'Ruby'],
+  liveButton: '',
+  sourceButton: '',
+  image: 'img/modal-photo.svg',
+};
 
+function closeModal() {
+  if (backdrop) {
+    backdrop.remove();
+  }
+
+  if (modal) {
+    modal.remove();
+  }
+}
+
+function popupWindow() {
+  modal.classList.add('modal');
+  modal.innerHTML = `
+    <div class='popup-title'>
+      <h5 class='g-item2 pff-500 inner-title'>${card.name[0]}</h5>
+      <img class='inner-close-icon' src='img/modal-photo.svg' alt='Close popup'>
+    </div>
+    <div class='image-popup'>
+      <img class='images' src='img/modal-photo.svg' alt='Project Image'>
+    </div>
+    <div class='popup-pharagraph'>
+          <p class='g-item3 paragraph-popup'>Lorem Ipsum is simply dummy text 
+          of the printing and typesetting industry. Lorem Ipsum has been the 
+          industry's standard dummy text ever since the 1500s, when an unknown 
+          printer took a galley of type and scrambled it 1960s with the 
+          releaLorem Ipsum is simply dummy text of the printing and typesetting  
+          ever since the 1500s, when an unknown printer took a galley of type 
+          veris lapoa todoe.</p>
+    </div>
+    <div class='popup-tag'>
+      <ul class='container ul-card'>
+        <li class='li-card g-item4'><a class='sff-500 a-card'>${card.technologies[0]}</a></li>
+        <li class='li-card g-item5'><a class='sff-500 a-card'>Ruby on Rails</a></li>
+        <li class='li-card g-item5'><a class='sff-500 a-card'>${card.technologies[1]}</a></li>
+      </ul>
+    </div>
+    <div class='c-container popup-buttons'>
+        <button class='g-item8 pff-500 inner-margin-buttom' type='button'><a class='sff-500 a-card' href='${card.liveButton}'>See Live<img class='inner-icon' src='img/live-icon.svg'></a></button>
+        <button class='g-item8 pff-500 inner-margin-buttom' type='button'><a class='sff-500 a-card' href='${card.sourceButton}'>See Source<img class='inner-icon' src='img/github-icon.svg'></a></button>
+    </div>`;
+
+  backdrop.appendChild(modal);
+
+  const closePopup = document.querySelector('.close-popup');
+  closePopup.addEventListener('click', closeModal);
+}
 
 hamburguer.addEventListener('click', () => {
   menu.classList.toggle('otra-clase');
@@ -36,99 +92,81 @@ document.querySelectorAll('.arrow-right-style').forEach((x) => x.addEventListene
   liPortfolio.classList.remove('mg-t');
 }));
 
-const startSection = document.querySelector('.hr1');
-
-const card = {
-  images: ['img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg'],
-  name: ['Multi-Post Stories'],
-  description: 'A daily selection of privately personalized reads no accounts or sign-ups required. has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
-  technologies: ['css', 'html', 'Bootstrap', 'Ruby'],
-  liveButton: '',
-  sourceButton: ''
-};
-
-var myWork = document.createElement('section');
+const myWork = document.createElement('section');
 myWork.id = 'myWork';
 document.body.insertBefore(myWork, startSection);
 
-var h2Work = document.createElement('h2');
+const h2Work = document.createElement('h2');
 h2Work.classList.add('pff-500');
 h2Work.textContent = 'MY RECENT';
 myWork.appendChild(h2Work);
 
-var h21Work = document.createElement('h2');
+const h21Work = document.createElement('h2');
 h21Work.classList.add('pff-500');
 h21Work.textContent = 'WORK';
-h2Work.append(h21Work);
+myWork.append(h21Work);
 
-var hrWork = document.createElement('hr');
+const hrWork = document.createElement('hr');
 hrWork.classList.add('hr-work');
 h21Work.append(hrWork);
 
-for(i=0; i<4; i++){
-  var containerCard = document.createElement('div');
+for (let i = 0; i < 4; j += 1) {
+
+  const containerCard = document.createElement('div');
   containerCard.classList.add('g-container');
   myWork.appendChild(containerCard);
 
-  var imageCard = document.createElement('img');
+  const imageCard = document.createElement('img');
   imageCard.classList.add('g-item1');
   imageCard.src = card.images[i];
   containerCard.appendChild(imageCard);
 
-  var cardTitle = document.createElement('h5');
+  const cardTitle = document.createElement('h5');
   cardTitle.classList.add('g-item2');
-  cardTitle.textContent = card.name;
+  cardTitle.textContent = card.name[i];
   containerCard.appendChild(cardTitle);
 
-  var cardParagraph = document.createElement('p');
+  const cardParagraph = document.createElement('p');
   cardParagraph.classList.add('g-item3');
   cardParagraph.textContent = card.description;
   containerCard.appendChild(cardParagraph);
 
-  var ulCard = document.createElement('ul');
+  const ulCard = document.createElement('ul');
   ulCard.classList.add('ul-card');
   containerCard.appendChild(ulCard);
 
-  for(let j=0; j<4; j++){
-    var liCard = document.createElement('li');
+  for (let j = 0; j < 4; j += 1) {
+    const liCard = document.createElement('li');
     liCard.classList.add('li-card');
     ulCard.appendChild(liCard);
-    var aLiCard = document.createElement('a');
+
+    const aLiCard = document.createElement('a');
     aLiCard.classList.add('sff-500');
     aLiCard.classList.add('a-card');
     aLiCard.textContent = card.technologies[j];
-    if(j === 0){
-      aLiCard.classList.add('g-item4');
-    }else if(j === 1){
-      aLiCard.classList.add('g-item5');
-    }else if(j === 2){
-      aLiCard.classList.add('g-item6');
-    }else if(j === 3){
-      aLiCard.classList.add('g-item7');
-    };
+    aLiCard.classList.add(`g-item${4 + j}`);  
     liCard.appendChild(aLiCard);
-  };
+  }
 
-  var buttonCard = document.createElement('button');
+  const buttonCard = document.createElement('button');
   buttonCard.classList.add('g-item8');
   buttonCard.classList.add('pff-500');
   buttonCard.textContent = 'See Project';
-  buttonCard.setAttribute('type', 'button');
+
   containerCard.appendChild(buttonCard);
+
   buttonCard.addEventListener('click', () => {
-    backdrop = document.createElement('section');
     backdrop.classList.add('backdrop');
     document.body.insertBefore(backdrop, startSection);
-    popupWindow(card.images[0], card.name);
-    backdrop.addEventListener('click', closeModal);
+    popupWindow();
   });
    
-  if(i === 0){
-    containerCard.classList.add('elipse20');
+  if (i === 0 || i === 2) {
+    containerCard.classList.add(`elipse2${i}`);
     cardTitle.classList.add('pff-500');
     cardParagraph.classList.add('sff-400');
-  }else if(i === 1){
-    containerCard.classList.add('elipse21');
+  } else if (i === 1 || i === 3) {
+    containerCard.classList.add(`elipse2${i}`);
     containerCard.classList.add('g-container-r');
     imageCard.classList.add('g-item1-r');
     cardTitle.classList.add('pff-500');
@@ -137,81 +175,8 @@ for(i=0; i<4; i++){
     cardParagraph.classList.add('g-item3-r');
     ulCard.classList.add('g-item12-r');
     buttonCard.classList.add('g-item8-r');
-  }else if(i === 2){
-    containerCard.classList.add('elipse22');
-    cardTitle.classList.add('pff-500');
-    cardParagraph.classList.add('sff-400');
-  }else if(i === 3){
-    containerCard.classList.add('elipse23');
-    containerCard.classList.add('g-container-r');
-    imageCard.classList.add('g-item1-r');
-    cardTitle.classList.add('pff-500');
-    cardTitle.classList.add('g-item2-r');
-    cardParagraph.classList.add('sff-400');
-    cardParagraph.classList.add('g-item3-r');
-    ulCard.classList.add('g-item12-r');
-    buttonCard.classList.add('g-item8-r');
-    buttonCard.classList.add('mr-b');
-    
   }
-};
-
-
-/*
-
-const seeProject;
-seeProject.addEventListener('click', () => {
-  menu.classList.toggle('otra-clase');
-  myEmail.classList.add('hidden-el');
-  emailIcon.classList.add('hidden-el');
-  liPortfolio.classList.add('mg-t');
-});
-
-
-*/
-
-
-
-function popupWindow(image, workTitle){
-  modal = document.createElement('div');
-  modal.classList.add('modal');
-  modal.innerHTML = `
-    <div class="popup-title">
-      <button class="" type="button"><img class="close-popup" src="img/close-icon.svg" alt="Close popup"></button>
-      <h5 class="g-item2">${card.name}</h5>
-    </div>
-    <div class="image-popup">
-      <img class="images" src="${image}" alt="Project Image">
-    </div>
-    <div class="popup-pharagraph">
-          <p class="g-item3 paragraph-popup">${card.description}</p>
-    </div>
-    <div class="popup-tag">
-      <ul class="ul-card">
-        <li class="li-card g-item4"><a class="sff-500 a-card">${card.technologies[0]}</a></li>
-        <li class="li-card g-item5"><a class="sff-500 a-card">${card.technologies[1]}</a></li>
-        <li class="li-card g-item6"><a class="sff-500 a-card">${card.technologies[2]}</a></li>
-        <li class="li-card g-item7"><a class="sff-500 a-card">${card.technologies[3]}</a></li>
-      </ul>
-    </div>
-    <div class="popup-buttons">
-        <button class="g-item8 pff-500 mr-b" type="button"><a class="sff-500 a-card" href="${card.sourceButton}">See this project</a></button>
-        <button class="g-item8 pff-500 mr-b" type="button"><a class="sff-500 a-card" href="${card.liveButton}">See live</a></button>
-    </div>`;
-  backdrop.appendChild(modal);
-};
-
-function closeModal () {
-  if(backdrop){
-  backdrop.remove();
+  if (i === 3) {
+    buttonCard.classList.add('mr-b'); 
   }
-
-  if(modal){
-    modal.remove();
-  }
-};
-
-
-// popupWindow(worksImages[i], workTitle[i]);
-// backdrop.addEventListener('click', closeModal);
-
+}
