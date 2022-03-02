@@ -824,6 +824,8 @@ textarea {
   z-index: 100;
   background-color: #191765;
   background-image: url('img/modal-circles.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .modal {

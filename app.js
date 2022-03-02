@@ -21,24 +21,23 @@ function closeModal() {
   if (backdrop) {
     backdrop.remove();
   }
-
   if (modal) {
     modal.remove();
   }
 }
 
-function popupWindow() {
+function popupWindow(image, workTitle) {
   modal.classList.add('modal');
   modal.innerHTML = `
-    <div class='popup-title'>
-      <h5 class='g-item2 pff-500 inner-title'>${card.name[0]}</h5>
-      <img class='inner-close-icon' src='img/modal-photo.svg' alt='Close popup'>
+    <div class="popup-title">
+      <h5 class="g-item2 pff-500 inner-title">${workTitle}</h5>
+      <img class="close-popup inner-close-icon" src="img/close-icon.svg" alt="Close popup">
     </div>
-    <div class='image-popup'>
-      <img class='images' src='img/modal-photo.svg' alt='Project Image'>
+    <div class="image-popup">
+      <img class="images" src="${image}" alt="Project Image">
     </div>
-    <div class='popup-pharagraph'>
-          <p class='g-item3 paragraph-popup'>Lorem Ipsum is simply dummy text 
+    <div class="popup-pharagraph">
+          <p class="g-item3 paragraph-popup">Lorem Ipsum is simply dummy text 
           of the printing and typesetting industry. Lorem Ipsum has been the 
           industry's standard dummy text ever since the 1500s, when an unknown 
           printer took a galley of type and scrambled it 1960s with the 
@@ -46,20 +45,18 @@ function popupWindow() {
           ever since the 1500s, when an unknown printer took a galley of type 
           veris lapoa todoe.</p>
     </div>
-    <div class='popup-tag'>
-      <ul class='container ul-card'>
-        <li class='li-card g-item4'><a class='sff-500 a-card'>${card.technologies[0]}</a></li>
-        <li class='li-card g-item5'><a class='sff-500 a-card'>Ruby on Rails</a></li>
-        <li class='li-card g-item5'><a class='sff-500 a-card'>${card.technologies[1]}</a></li>
+    <div class="popup-tag">
+      <ul class="container ul-card">
+        <li class="li-card g-item4"><a class="sff-500 a-card">${card.technologies[0]}</a></li>
+        <li class="li-card g-item5"><a class="sff-500 a-card">Ruby on Rails</a></li>
+        <li class="li-card g-item5"><a class="sff-500 a-card">${card.technologies[1]}</a></li>
       </ul>
     </div>
-    <div class='c-container popup-buttons'>
-        <button class='g-item8 pff-500 inner-margin-buttom' type='button'><a class='sff-500 a-card' href='${card.liveButton}'>See Live<img class='inner-icon' src='img/live-icon.svg'></a></button>
-        <button class='g-item8 pff-500 inner-margin-buttom' type='button'><a class='sff-500 a-card' href='${card.sourceButton}'>See Source<img class='inner-icon' src='img/github-icon.svg'></a></button>
+    <div class="c-container popup-buttons">
+        <button class="g-item8 pff-500 inner-margin-buttom" type="button"><a class="sff-500 a-card" href="${card.liveButton}">See Live<img class="inner-icon" src="img/live-icon.svg"></a></button>
+        <button class="g-item8 pff-500 inner-margin-buttom" type="button"><a class="sff-500 a-card" href="${card.sourceButton}">See Source<img class="inner-icon" src="img/github-icon.svg"></a></button>
     </div>`;
-
   backdrop.appendChild(modal);
-
   const closePopup = document.querySelector('.close-popup');
   closePopup.addEventListener('click', closeModal);
 }
@@ -110,7 +107,7 @@ const hrWork = document.createElement('hr');
 hrWork.classList.add('hr-work');
 h21Work.append(hrWork);
 
-for (let i = 0; i < 4; j += 1) {
+for (let i = 0; i < 4; i += 1) {
 
   const containerCard = document.createElement('div');
   containerCard.classList.add('g-container');
@@ -144,7 +141,7 @@ for (let i = 0; i < 4; j += 1) {
     aLiCard.classList.add('sff-500');
     aLiCard.classList.add('a-card');
     aLiCard.textContent = card.technologies[j];
-    aLiCard.classList.add(`g-item${4 + j}`);  
+    aLiCard.classList.add(`g-item${4 + j}`);
     liCard.appendChild(aLiCard);
   }
 
@@ -152,13 +149,12 @@ for (let i = 0; i < 4; j += 1) {
   buttonCard.classList.add('g-item8');
   buttonCard.classList.add('pff-500');
   buttonCard.textContent = 'See Project';
-
   containerCard.appendChild(buttonCard);
 
   buttonCard.addEventListener('click', () => {
     backdrop.classList.add('backdrop');
     document.body.insertBefore(backdrop, startSection);
-    popupWindow();
+    popupWindow(card.image, card.name[0]);
   });
    
   if (i === 0 || i === 2) {
@@ -177,6 +173,6 @@ for (let i = 0; i < 4; j += 1) {
     buttonCard.classList.add('g-item8-r');
   }
   if (i === 3) {
-    buttonCard.classList.add('mr-b'); 
+    buttonCard.classList.add('mr-b');
   }
 }
