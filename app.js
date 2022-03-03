@@ -7,6 +7,9 @@ const liPortfolio = document.querySelector('.mg-t-dom');
 const backdrop = document.createElement('section');
 const modal = document.createElement('div');
 const startSection = document.querySelector('.hr1');
+const form = document.querySelector('.form');
+const email = document.querySelector('#email');
+const error = document.querySelector('.error');
 const card = {
   images: ['img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg'],
   name: ['Multi-Post Stories', 'Multi-Post Stories', 'Multi-Post Stories', 'Multi-Post Stories'],
@@ -16,6 +19,17 @@ const card = {
   sourceButton: '',
   image: 'img/modal-photo.svg',
 };
+
+form.addEventListener('submit', (event) => {
+  if (email.value.length === 0 || email.value !== email.value.toLowerCase()) {
+    event.preventDefault();
+    error.classList.remove('hidde-span');
+    error.textContent = 'The email field should be in lower case';
+  } else {
+    error.textContent = '';
+    error.classList.add('hidde-span');
+  }
+});
 
 function closeModal() {
   if (backdrop) {
