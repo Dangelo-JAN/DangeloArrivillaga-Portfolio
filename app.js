@@ -11,7 +11,7 @@ const card = {
   images: ['img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg'],
   name: ['Multi-Post Stories', 'Multi-Post Stories', 'Multi-Post Stories', 'Multi-Post Stories'],
   description: 'A daily selection of privately personalized reads no accounts or sign-ups required. has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
-  technologies: ['css', 'html', 'Bootstrap', 'Ruby'],
+  technologies: ['css', 'html', 'Bootstrap', 'Ruby', 'Ruby on Rails', 'Github'],
   liveButton: '',
   sourceButton: '',
   image: 'img/modal-photo.svg',
@@ -47,9 +47,10 @@ function popupWindow(image, workTitle) {
     </div>
     <div class="popup-tag">
       <ul class="container ul-card inner-ul">
-        <li class="li-card g-item4"><a class="sff-500 a-card">${card.technologies[0]}</a></li>
-        <li class="li-card g-item5"><a class="sff-500 a-card">Ruby on Rails</a></li>
-        <li class="li-card g-item5"><a class="sff-500 a-card">${card.technologies[1]}</a></li>
+        <li class="li-card g-item4"><a class="sff-500 a-card">${card.technologies[1]}</a></li>
+        <li class="li-card g-item5"><a class="sff-500 a-card">${card.technologies[4]}</a></li>
+        <li class="li-card g-item5"><a class="sff-500 a-card">${card.technologies[0]}</a></li>
+        <li class="li-card g-item5"><a class="sff-500 a-card hidden-el">${card.technologies[5]}</a></li>
       </ul>
     </div>
     <div class="c-container popup-buttons">

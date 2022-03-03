@@ -506,7 +506,128 @@ textarea {
 }
 
 /* -----Modal Style-----*/
+.otra-clase {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #edecff;
+  background-color: #191765;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding-top: 3em;
+  list-style: none;
+  background-image: url(img/ellipses-mobile-menu1.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
 
+.li-desktop {
+  align-self: start;
+  padding: 0.5em 0;
+}
+
+.mg-t {
+  margin-top: 1.5em;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 0.6em;
+  padding-right: 1em;
+}
+
+.arrow-right-style {
+  position: absolute;
+  right: 12%;
+  margin-top: 0.5em;
+  padding-right: 1em;
+}
+
+.a-menu {
+  text-decoration: none;
+  color: #edecff;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #191765;
+  background-image: url('img/modal-circles.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
+}
+
+.modal {
+  width: 80%;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 0.5rem;
+  transition: 1s;
+  margin: 1em auto;
+  border: solid #fff 1px;
+  overflow: scroll;
+}
+
+.image-popup {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.paragraph-popup {
+  text-align: center;
+  width: 90%;
+  margin-left: 1em;
+}
+
+.inner-close-icon {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 7.5%;
+  right: 15%;
+}
+
+.inner-title {
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
+.inner-margin-buttom {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding: 0;
+  width: auto;
+  height: 7.5vh;
+  padding-bottom: 5em;
+}
+
+.inner-icon {
+  padding-top: 1em;
+  margin-left: 1em;
+}
+
+.inner-ul {
+  justify-content: center;
+}
+
+.images {
+  width: 70vw;
+}
 
 /* -----Desktop media query Version----- */
 @media screen and (min-width: 992px) {
@@ -772,11 +893,11 @@ textarea {
   }
 
   .backdrop, .modal {
-    overflow: hidden !important;
+    overflow: hidden;
   }
-/*
+
   .modal {
-    width: 50vw;
+    width: 70vw;
   }
 
   .popup-buttons {
@@ -791,137 +912,32 @@ textarea {
 
   .images {
     content:url(img/image-modal-desk.svg);
-    width: 75vw !important;
+    width: 80%;
   }
 
   .paragraph-popup {
+    font-family: var(--pfont-family);
     font-size: 1em;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-  }*/
-}
+  }
 
-/* ------ mobile menu updates ----- */
-.otra-clase {
-  position: fixed;
-  left: 0;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  font-weight: 500;
-  font-size: 1.5em;
-  color: #edecff;
-  background-color: #191765;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding-top: 3em;
-  list-style: none;
-  background-image: url(img/ellipses-mobile-menu1.svg);
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: cover;
-}
+  .inner-title {
+    margin-top: 0;
+  }
 
-.li-desktop {
-  align-self: start;
-  padding: 0.5em 0;
-}
+  .inner-margin-buttom {
+    width: auto;
+  }
 
-.mg-t {
-  margin-top: 1.5em;
-}
+  .inner-icon {
+    width: 10%;
+    padding-top: 0;
+  }
 
-.close-icon {
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  width: 0.6em;
-  padding-right: 1em;
-}
-
-.arrow-right-style {
-  position: absolute;
-  right: 12%;
-  margin-top: 0.5em;
-  padding-right: 1em;
-}
-
-.a-menu {
-  text-decoration: none;
-  color: #edecff;
-}
-
-.backdrop {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  background-color: #191765;
-  background-image: url('img/modal-circles.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: scroll;
-}
-
-.modal {
-  width: 80%;
-  z-index: 200;
-  background: rgba(255, 255, 255, 0.16);
-  padding: 0.5rem;
-  transition: 1s;
-  margin: 1em auto;
-  border: solid #fff 1px;
-  overflow: scroll;
-}
-
-.image-popup {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.paragraph-popup {
-  text-align: center;
-  width: 90%;
-  margin-left: 1em;
-}
-
-.inner-close-icon {
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0.1);
-  position: absolute;
-  top: 7.5%;
-  right: 15%;
-}
-
-.inner-title {
-  font-size: 1.25em;
-  margin-bottom: 1em;
-  margin-top: 0.5em;
-}
-
-.inner-margin-buttom {
-  margin-top: 0;
-  margin-bottom: 1em;
-  padding: 0;
-  width: auto;
-  height: 7.5vh;
-  padding-bottom: 5em;
-}
-
-.inner-icon {
-  padding-top: 1em;
-  margin-left: 1em;
-}
-
-.inner-ul {
-  justify-content: center;
-}
-
-.images {
-  width: 70vw;
+  .inner-close-icon {
+    width: 0.6em;
+    top: 5%;
+  }
 }
