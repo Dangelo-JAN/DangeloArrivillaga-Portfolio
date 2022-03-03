@@ -505,7 +505,6 @@ textarea {
   }
 }
 
-/* -----Modal Style-----*/
 .otra-clase {
   position: fixed;
   left: 0;
@@ -892,7 +891,8 @@ textarea {
     background-position: right top;
   }
 
-  .backdrop, .modal {
+  .backdrop,
+  .modal {
     overflow: hidden;
   }
 
