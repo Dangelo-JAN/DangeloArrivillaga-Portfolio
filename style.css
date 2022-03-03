@@ -897,7 +897,7 @@ textarea {
   }
 
   .modal {
-    width: 70vw;
+    width: 60vw;
   }
 
   .popup-buttons {
@@ -912,12 +912,12 @@ textarea {
 
   .images {
     content:url(img/image-modal-desk.svg);
-    width: 80%;
+    width: 95%;
   }
 
   .paragraph-popup {
     font-family: var(--pfont-family);
-    font-size: 1em;
+    font-size: 0.8em;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -939,5 +939,6 @@ textarea {
   .inner-close-icon {
     width: 0.6em;
     top: 5%;
+    right: 20%;
   }
 }
