@@ -46,7 +46,7 @@ function popupWindow(image, workTitle) {
           veris lapoa todoe.</p>
     </div>
     <div class="popup-tag">
-      <ul class="container ul-card">
+      <ul class="container ul-card inner-ul">
         <li class="li-card g-item4"><a class="sff-500 a-card">${card.technologies[0]}</a></li>
         <li class="li-card g-item5"><a class="sff-500 a-card">Ruby on Rails</a></li>
         <li class="li-card g-item5"><a class="sff-500 a-card">${card.technologies[1]}</a></li>

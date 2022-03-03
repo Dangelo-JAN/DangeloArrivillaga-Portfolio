@@ -218,6 +218,7 @@ textarea {
 }
 
 .a-card {
+  text-decoration: none;
   font-style: normal;
   font-size: 15px;
   line-height: 20px;
@@ -504,6 +505,9 @@ textarea {
   }
 }
 
+/* -----Modal Style-----*/
+
+
 /* -----Desktop media query Version----- */
 @media screen and (min-width: 992px) {
   .resp-hidden {
@@ -766,6 +770,36 @@ textarea {
     background-repeat: no-repeat;
     background-position: right top;
   }
+
+  .backdrop, .modal {
+    overflow: hidden !important;
+  }
+/*
+  .modal {
+    width: 50vw;
+  }
+
+  .popup-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .inner-ul {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .images {
+    content:url(img/image-modal-desk.svg);
+    width: 75vw !important;
+  }
+
+  .paragraph-popup {
+    font-size: 1em;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }*/
 }
 
 /* ------ mobile menu updates ----- */
@@ -830,20 +864,18 @@ textarea {
   background-image: url('img/modal-circles.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: scroll;
 }
 
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 80%;
   z-index: 200;
   background: rgba(255, 255, 255, 0.16);
   padding: 0.5rem;
   transition: 1s;
-  margin: 0;
+  margin: 1em auto;
   border: solid #fff 1px;
+  overflow: scroll;
 }
 
 .image-popup {
@@ -862,8 +894,8 @@ textarea {
   margin: 0;
   background-color: rgba(255, 255, 255, 0.1);
   position: absolute;
-  top: 3%;
-  right: 10%;
+  top: 7.5%;
+  right: 15%;
 }
 
 .inner-title {
@@ -875,9 +907,21 @@ textarea {
 .inner-margin-buttom {
   margin-top: 0;
   margin-bottom: 1em;
+  padding: 0;
+  width: auto;
+  height: 7.5vh;
+  padding-bottom: 5em;
 }
 
 .inner-icon {
   padding-top: 1em;
   margin-left: 1em;
+}
+
+.inner-ul {
+  justify-content: center;
+}
+
+.images {
+  width: 70vw;
 }
