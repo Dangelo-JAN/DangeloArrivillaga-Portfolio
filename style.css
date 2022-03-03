@@ -448,6 +448,10 @@ textarea {
   color: black;
 }
 
+.hr-work {
+  margin-left: 0;
+}
+
 /* Id Selectors */
 #p-headline {
   font-size: 20px;

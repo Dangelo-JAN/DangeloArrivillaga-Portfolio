@@ -108,7 +108,6 @@ hrWork.classList.add('hr-work');
 h21Work.append(hrWork);
 
 for (let i = 0; i < 4; i += 1) {
-
   const containerCard = document.createElement('div');
   containerCard.classList.add('g-container');
   myWork.appendChild(containerCard);
@@ -156,7 +155,7 @@ for (let i = 0; i < 4; i += 1) {
     document.body.insertBefore(backdrop, startSection);
     popupWindow(card.image, card.name[0]);
   });
-   
+
   if (i === 0 || i === 2) {
     containerCard.classList.add(`elipse2${i}`);
     cardTitle.classList.add('pff-500');
