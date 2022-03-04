@@ -7,6 +7,7 @@
 
 - HTML
 - CSS
+- Javascript
 
 ## Getting Started
 
