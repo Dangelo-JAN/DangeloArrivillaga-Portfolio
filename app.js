@@ -8,7 +8,7 @@ const backdrop = document.createElement('section');
 const modal = document.createElement('div');
 const startSection = document.querySelector('.hr1');
 const form = document.querySelector('.form');
-const email = document.querySelector('#email');
+const email = document.querySelector('#mail');
 const error = document.querySelector('.error');
 const card = {
   images: ['img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg', 'img/img-placeholder.svg'],

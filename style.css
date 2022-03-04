@@ -481,6 +481,10 @@ textarea {
   padding-bottom: 4em;
 }
 
+.fo-style {
+  text-align: center;
+}
+
 /* -----Hidden elements----- */
 .hidden-el {
   display: none;
@@ -505,6 +509,7 @@ textarea {
   }
 }
 
+/* -----Modal Style ----- */
 .otra-clase {
   position: fixed;
   left: 0;
@@ -626,6 +631,15 @@ textarea {
 
 .images {
   width: 70vw;
+}
+
+/* ----- Validation Style ----- */
+.error {
+  display: block;
+  text-align: center;
+  margin-top: 2em;
+  font-family: var(--sfont-family);
+  color: #ff0;
 }
 
 /* -----Desktop media query Version----- */
@@ -801,11 +815,9 @@ textarea {
     line-height: 28px;
     text-align: center;
     color: #ebebff;
-    position: absolute;
-    width: 221px;
     height: 29px;
-    left: 250px;
-    top: 4385px;
+    margin-top: 2.4em;
+    margin-left: 2em;
   }
 
   #form-section {
@@ -830,11 +842,6 @@ textarea {
   .msg-field {
     width: 50vw;
     margin-left: 12.5em;
-  }
-
-  .inline-block {
-    display: inline-block;
-    margin-left: 20em;
   }
 
   .h-form::before {
@@ -941,5 +948,10 @@ textarea {
     width: 0.6em;
     top: 5%;
     right: 20%;
+  }
+
+  .fo-style {
+    display: flex;
+    justify-content: center;
   }
 }
